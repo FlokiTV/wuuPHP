@@ -1,3 +1,4 @@
 <?php
-
-Router::get('/', ["www", "home"]);
+Router::$class = "www";
+// Router::get('/', ["www", "home"]);
+Router::get('/', "home");

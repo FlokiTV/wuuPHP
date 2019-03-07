@@ -8,17 +8,20 @@ class Router{
         Flight::start();
     }
     function get($path, $fn){
-        Flight::route("GET {$path}", $fn);
+        Flight::route("GET {$path}", self::class($fn));
     }
     function post($path, $fn){
-        Flight::route("POST {$path}", $fn);
+        Flight::route("POST {$path}", self::class($fn));
     }
     function routes($routes, $method = "GET"){
         foreach($routes as $route){
             $path   = (isset(self::$path) )  ? "{$method} /".self::$path.$route[0]    :$route[0];
-            $fn     = (isset(self::$class)) ? [self::$class, $route[1]]     :$route[1];
+            $fn     = self::class($route[1]);
             Flight::route($path,$fn);
         }  
+    }
+    function class($fn){
+        return (isset(self::$class)) ? [self::$class, $fn] : $fn;
     }
     // return request method [ GET, POST, PUT, DELETE ]
     function method()   { return self::request()->method; }
