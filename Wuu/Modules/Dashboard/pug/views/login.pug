@@ -1,0 +1,24 @@
+include ../libs/inc.pug
+style.
+    #menu,.navbar{
+        display:none
+    }
+    #content{
+        padding:0;
+        overflow:hidden
+    }
+section.hero.is-fullheight.is-dark.is-bold
+    .hero-body
+        .container.has-text-centered
+            .column.is-4.is-offset-4
+                h3.title.has-text-withe Wuu::Dashboard
+                p.subtitle Faça login para continuar
+                .box
+                    form(method="post")
+                        .field
+                            .control
+                                input.input.is-large(placeholder="Email")
+                        .field
+                            .control
+                                input.input.is-large(placeholder="Password")
+                        button.button.is-danger.is-large.is-fullwidth(type="submit") Login

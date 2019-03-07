@@ -1,0 +1,15 @@
+{
+  "name": "wuu-fw-dashboard",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "w-t":"pug -w -P -E php pug/views --out views"
+  },
+  "author": "wuster.me",
+  "license": "ISC",
+  "dependencies": {
+    "pug-cli": "^1.0.0-alpha6"
+  }
+}

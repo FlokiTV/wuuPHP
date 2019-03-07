@@ -1,0 +1,18 @@
+include ../libs/inc.pug
+.box
+    aside.menu
+        +php.
+            foreach(Dashboard::$menu as $key => $subitens):
+        p.menu-label
+            +php(true).
+                $key
+        ul.menu-list
+            +php.
+                foreach($subitens as $name => $href):
+            li
+                a(href!="<?=$href?>")
+                    +php(true).
+                        $name
+        +php.
+                endforeach;
+            endforeach;

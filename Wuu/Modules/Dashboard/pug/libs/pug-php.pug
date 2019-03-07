@@ -1,0 +1,37 @@
+- locals.php = { s: '<?php ', e:'?>', '=':'<?=' }
+mixin php(echo=false)
+    .
+        <?#{(echo)? '=' : 'php '}
+
+    block
+    .
+        ?>
+        
+mixin php_end(term)
+    case term
+        when 'if'
+            | endif;
+mixin php_if(cond)
+    .
+        if(!{cond}):
+    if block
+        block
+        .
+            endif;
+mixin php_else(iff=false, cond="")
+    .
+        !{(iff)? 'elseif('+cond+'):' : 'else:'}
+    if block
+        block
+        .
+            endif;
+mixin php_func(name, args)
+    .
+
+       function !{name}(){
+
+    block
+    .
+
+        }
+        

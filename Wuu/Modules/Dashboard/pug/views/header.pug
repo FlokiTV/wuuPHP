@@ -1,0 +1,21 @@
+include ../libs/inc.pug
+doctype
+<html>
+    head
+        base(href!="<?=$info['url']?>")
+        +php.
+            Template::meta();
+            Template::scripts();
+            Template::styles();
+            Template::gAnalytics();
+<body>
+    <div class="container-fluid full-h">
+        include nav.pug
+        <div class="columns is-mobile full-h" id="canvas">
+            <div class="column is-3-desktop is-11-mobile full-h" id="menu">
+                +php.
+                        include 'menu.php';
+            </div>
+            <div class="column full-h" id="content">
+            
+            

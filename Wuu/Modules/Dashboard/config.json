@@ -1,0 +1,11 @@
+{
+    "template":{
+        "path":"views",
+        "icon":"",
+        "info":{
+            "title": "Wuu::Dashboard",
+            "subtitle": "Site subtitle",
+            "desc": "Site desc"
+        }
+    }
+}
