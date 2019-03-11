@@ -1,7 +1,8 @@
 <?php
 
 class www{
-    function home(){
-        echo "Welcome to WüuFramwork";
+    public static $name;
+    public function home(){
+        echo "Welcome to ".self::$name;
     }
 }
