@@ -1,3 +1,6 @@
+Wuu/Libs/
+Wuu/Modules/Movies
+Wuu/Modules/API
 # Logs
 logs
 *.log
@@ -74,3 +77,4 @@ typings/
 
 # FuseBox cache
 .fusebox/
+.gitignore
